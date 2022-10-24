@@ -1,0 +1,33 @@
+﻿@model Work01.Models.Category
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row ">
+    <div class="col">
+        <h1 class="bg-secondary text-center">Insert Expence Category!!</h1>
+        <form class="mb-5 mt-5 align-content-lg-center" asp-action="Edit">
+            <input asp-for="CategoryId" type="hidden" />
+            <div class="">
+                <label asp-for="Categories" class="form-control-sm col-2">Categories</label>
+
+                <input asp-for="Categories" type="text" class="form-control-sm col-5 " placeholder="Categories" />
+
+                <div class="col-4">
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col offset-2 mb-5">
+                <button type="submit" class="btn btn-sm btn-primary ">Update</button>
+                <a asp-action="Index" asp-controller="Category" class="btn btn-sm btn-warning">Back to Menu</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+

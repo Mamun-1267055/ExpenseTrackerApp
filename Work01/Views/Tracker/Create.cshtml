@@ -1,0 +1,59 @@
+﻿@model Work01.Models.User;
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="text-center mb-lg-3">
+    <h2 style="font-family:cursive;" class="text-center">Expense Traking App</h2>
+</div>
+<div class="row " >
+    
+    
+    <div class="col-9">
+        <form style="border: groove 5px;" class="" asp-action="Create">
+        <h3 class=" bg-dark text-white text-center">Insert New Expenses Here!!</h3>
+        <hr />
+        <hr />
+        
+           
+        <div class="">
+                <label asp-for="CategoryId" class="form-control-sm col-2">Categories</label>
+                <select type="text" class="col-form-label-sm col-sm-5" asp-for="CategoryId"  asp-items="@(new SelectList(@ViewBag.categories,"CategoryId","Categories"))">
+                <option value="0" selected="selected"> --Select--</option>
+            </select>
+            <div class="col-2">
+               <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            
+        </div>
+        <div class="">
+            <label asp-for="ExpenseDate" class="form-control-sm col-2">Expense Date</label>
+            <input asp-for="ExpenseDate" type="date" class="form-control-sm col-sm-5" placeholder="Expense Date" />
+            <div class="col-3">
+                <span asp-validation-for="ExpenseDate" class="text-danger"></span>
+            </div>
+
+        </div>
+            <div class="">
+                <label asp-for="Amount" class="form-control-sm col-2">Amount</label>
+                <input asp-for="Amount" type="text" class="form-control-sm col-sm-5" placeholder="Expense Amount" />
+                <div class="col-3">
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col offset-2 mb-5">
+                <button type="submit" class="btn btn-sm btn-primary ">Save</button>
+                <a asp-action="Index" asp-controller="Tracker" class="btn btn-sm btn-warning">Back to Menu</a>
+            </div>
+           
+        </form>
+
+    </div>
+    <div class="col-3 jumbotron" style="background-color:burlywood">
+        <h3>In htis app user can insert new expenses wich is valid date.If the user want to insert future dated expense the app thow exception or thow messages</h3>
+    </div>
+    
+</div>
+
+
+

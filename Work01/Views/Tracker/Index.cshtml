@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Work01.Models.ViewModel.UsersVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row">
+    <div class="col-10">
+        <div>
+            
+            <a asp-action="Create" asp-controller="Tracker" class="btn btn-sm btn-dark btn-outline-light mb-4">Insert New</a>
+            <h2 class="bg-success text-center">Daily Expenses</h2>
+        </div>
+       
+        <table class="table table-sm table-bordered table-striped table-hover ">
+            
+           
+             
+            <thead class="border-white table-dark">
+               
+                <tr>
+                    
+                    <th>Category</th>
+                    <th>Expense Date</th>
+                   
+                    <th>Amount</th>
+                    <th>Actions</th>
+               </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.Categories</td>
+                        <td>@x.ExpenseDate</td>
+                        <td>@x.Amount</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@x.Id" class="btn btn-sm btn-primary"><i class=""></i>Edit</a>
+                            <a asp-action="Delete" asp-route-id="@x.Id" class="btn btn-sm btn-danger ">Delete</a>
+                        </td>
+                    </tr>
+                    
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2 jumbotron mt-lg-5" style="background-color:burlywood ">
+        <h5 class="bg-transparent">In this App user can track his daily important expenses information and can control (Insert or edit and delete) these informations</h5>
+    </div>
+</div>
