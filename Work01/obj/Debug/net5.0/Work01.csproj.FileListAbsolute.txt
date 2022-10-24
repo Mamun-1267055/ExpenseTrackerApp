@@ -151,3 +151,4 @@ D:\ExpenseTrakerApp\ExpenseTrackerApp\Work01\obj\Debug\net5.0\Razor\Views\Catego
 D:\ExpenseTrakerApp\ExpenseTrackerApp\Work01\obj\Debug\net5.0\Razor\Views\Shared\_Invalid.cshtml.g.cs
 D:\ExpenseTrakerApp\ExpenseTrackerApp\Work01\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
 D:\ExpenseTrakerApp\ExpenseTrackerApp\Work01\obj\Debug\net5.0\Razor\Views\Tracker\GetData.cshtml.g.cs
+D:\ExpenseTrakerApp\ExpenseTrackerApp\Work01\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs

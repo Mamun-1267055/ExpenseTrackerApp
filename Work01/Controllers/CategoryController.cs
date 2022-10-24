@@ -110,10 +110,18 @@ namespace Work01.Controllers
         public IActionResult Delete(int? id)
         {
             var cat = db.Categories.FirstOrDefault(x => x.CategoryId == id);
-            db.Remove(cat);
-            db.SaveChanges();
+            
 
-            return View();
+            return View(cat);
+
+        }
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var cat = db.Categories.FirstOrDefault(x => x.CategoryId == id);
+            db.Entry(cat).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            db.SaveChanges();
+            return RedirectToAction("Index");
 
         }
 

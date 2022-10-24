@@ -1,4 +1,5 @@
-﻿@{
+﻿@*@model IEnumerable< Work01.Models.DAL.IndexDate>*@
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +7,50 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@*<div class="row">
+    <div class="col-10">
+        <div>
+
+            <a asp-action="Create" asp-controller="Tracker" class="btn btn-sm btn-dark btn-outline-light mb-4">Insert New</a>
+            <h2 class="bg-success text-center">Daily Expenses</h2>
+        </div>
+
+
+        <table class="table table-sm table-bordered table-striped table-hover " style="background-color:cadetblue">
+
+
+
+            <thead class="border-white table-dark">
+
+                <tr>
+
+                    <th>Category</th>
+                    <th>Expense Date</th>
+
+                    <th>Amount</th>
+                    <th>Actions </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var x in Model.User)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@x.ExpenseDate</td>
+                        <td>@x.Amount</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@x.Id" class="btn btn-sm btn-primary"><i class=""></i>Edit</a>
+                            <a asp-action="Delete" asp-route-id="@x.Id" class="btn btn-sm btn-danger ">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2 jumbotron mt-lg-5" style="background-color:burlywood ">
+        <h5 class="bg-transparent">In this App user can track his daily important expenses information and can control (Insert or edit and delete) these informations</h5>
+    </div>
+</div>*@
