@@ -107,7 +107,7 @@ namespace Work01.Controllers
             //}
             //return RedirectToAction("Index");
         }
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int? id)
         {
             var cat = db.Categories.FirstOrDefault(x => x.CategoryId == id);
             db.Remove(cat);
